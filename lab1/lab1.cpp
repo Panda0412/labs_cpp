@@ -43,7 +43,7 @@ int main() {
     // File with result
     ofstream output_file ("ex1.txt");
     // Graph drawing
-    for (int i = 1; i <= height+1; i++) {
+    for (int i = 0; i < height+1; i++) {
         if (i < axis) {                      // Positive function values
             for (int j = 0; j < width; j++) {
                 if ((axis - i) <= values[j]) { output_file << '#'; }
