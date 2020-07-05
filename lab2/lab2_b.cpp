@@ -38,5 +38,13 @@ int main() {
     cout << endl << "arr1 after assignment (arr1 = arr2)" << endl;
     for (int i = 0; i < size; ++i) {
         cout << "i = " << i << ": " << arr1[i] << endl;
+        arr1[i] *= 10;
+    }
+
+    arr1 = arr1;
+
+    cout << " (arr1 = arr1)" << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << "i = " << i << ": " << arr1[i] << endl;
     }
 }

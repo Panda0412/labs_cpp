@@ -24,7 +24,13 @@ public:
 
     //assignment operator
     safe_c_array_t& operator=(const safe_c_array_t<T> &r) {
+        if (this == &r) {
+            cout << endl << "self-assignment!";
+            return *this;
+        }
+        delete[] arr;
         size = r.size;
+        arr = new T[size];
         for (int i = 0; i < size; ++i) {
             arr[i] = r[i];
         }
